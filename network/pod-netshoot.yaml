@@ -1,0 +1,25 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: pod-{{CMD_SED_CTX}}
+spec:
+  nodeName: {{CMD_SED_CTX}}
+  containers:
+  - args:
+    - sleep
+    - infinity
+    image: nicolaka/netshoot
+    name: netshoot
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: pod-{{CMD_SED_CTX}}-m02
+spec:
+  nodeName: {{CMD_SED_CTX}}-m02
+  containers:
+  - args:
+    - sleep
+    - infinity
+    image: nicolaka/netshoot
+    name: netshoot

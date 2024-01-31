@@ -1,0 +1,17 @@
+apiVersion: projectcalico.org/v3
+kind: IPPool
+metadata:
+  name: disabled-podcidr-for-istio-cluster-02
+spec:
+  cidr: 172.22.0.0/16
+  disabled: true
+  natOutgoing: false
+---
+apiVersion: projectcalico.org/v3
+kind: IPPool
+metadata:
+  name: disabled-servicecidr-for-istio-cluster-02
+spec:
+  cidr: 192.168.2.0/24
+  disabled: true
+  natOutgoing: false

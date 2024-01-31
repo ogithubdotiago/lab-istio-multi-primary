@@ -1,0 +1,8 @@
+apiVersion: projectcalico.org/v3
+kind: BGPPeer
+metadata:
+  name: istio-cluster-01-m02
+spec:
+  asNumber: 64512
+  nodeSelector: route-reflector == 'true'
+  peerIP: CMD_SED_SET_IP
